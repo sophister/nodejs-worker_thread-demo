@@ -18,8 +18,10 @@ const writeStream = fs.createWriteStream(outputFile, {
 
 for (let i = 0; i < 10; i++) {
   const workerName = `worker_${i}`;
-  const worker = fork(workerPath, [workerName]);
+  const worker = fork(workerPath, [workerName], {
+    detached: true,
+  });
   writeStream.write(`[worker_created]${workerName}\r\n`);
 }
-
+writeStream.write(`[parent]end\r\n`);
 console.log('Parent process started workers.');
