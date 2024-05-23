@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-worker_thread-demo",
+  "version": "1.0.0",
+  "description": "demo of nodejs worker_thread module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
